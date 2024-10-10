@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Group 1</title>
+</head>
+
+<body>
+    <audio autoplay id="myaudio">
+        <source src="audio/pokemon.mp3">
+    </audio>
+    <script>
+        var audio = document.getElementById("myaudio");
+        audio.volume = 0.2;
+    </script>
+    <div class="container">
+        <div class="left">
+            <img src="images/preview.gif" alt="Locked In: De La Salle Preview">
+        </div>
+        <div class="right">
+            <h1>Locked In: De La Salle</h1>
+            <h3> A 3D low-poly horror game set on the haunted <br>campus of De La Salle University in Dasmariñas.</h3>
+            <div class="form">
+                <h2>Sign In</h2>
+                <form action="javascript:void(0);">
+                    <label for="email">Email:</label><br>
+                    <input type="text" name="email" id="email" placeholder="xyz1234@dlsud.edu.ph"> <br>
+                    <label for="pass">Password:</label> <br>
+                    <input type="password" name="password" id="pass"> <br>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="remember" name="remember" class="checkbox" onclick="toggleRememberMe()"> 
+                        <label for="remember">Keep me logged in</label>
+                    </div>
+                    <audio id="jumpscare" src="audio/jumpscare.mp3"></audio>
+                    <audio id="jumpscare2" src="audio/jumpscare2.mp3"></audio>
+                    <img id="popupImage" src="images/monster.png" style="display:none; position:fixed; top:50.5%; left:34%; transform:translate(-50%, -50%); z-index: 5;">
+                    <img id="glitch" src="images/glitch.gif" 
+                    style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index: 4;">
+                    <button type="button" class="button" onclick="attempt()">Sign In</button>
+                </form>
+            </div>
+        </div>
+        <div class="fog-img fog-img-first"></div>
+        <div class="fog-img fog-img-second"></div>
+    </div>
+</body>
+</html>
